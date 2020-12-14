@@ -3,23 +3,29 @@ pipeline {
     stages {
         stage('Stage 1') {
             steps {
-                sh 'echo "Hello World"'
-                sh '''
+                timeout(time: 1, unit: 'MINUTES') {
+                    sh 'echo "Hello World"'
+                    sh '''
                     echo "Wab dab dub la la dub dub test"
                     ls -lah
                     pwd -P
                 '''
+                }    
             }
         }
         stage('Stage 2'){
             steps{
-                sh 'echo "Another Stage"'
-                sh 'echo "Aloha!"'
+                timeout(time: 1, unit: 'MINUTES') {
+                    sh 'echo "Another Stage"'
+                    sh 'echo "Aloha!"'
+                }    
             }
         }
         stage('Stage 3'){
             steps{
-                sh 'echo "Doing step 3"'
+                timeout(time: 1, unit: 'MINUTES') {
+                    sh 'echo "Doing step 3"'
+                }    
             }
         }
     }
