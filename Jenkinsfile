@@ -7,6 +7,7 @@ pipeline {
                 sh '''
                     echo "Wab dab dub la la dub dub test"
                     ls -lah
+                    pwd -P
                 '''
             }
         }
