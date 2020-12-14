@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Stage 1') {
             steps {
                 sh 'echo "Hello World"'
                 sh '''
@@ -9,6 +9,12 @@ pipeline {
                     ls -lah
                     pwd -P
                 '''
+            }
+        }
+        stage('Stage 2'){
+            steps{
+                sh 'echo "Another Stage"'
+                sh 'echo "Aloha!"'
             }
         }
     }
