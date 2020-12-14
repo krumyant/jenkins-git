@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Stage 3'){
             steps{
-                timeout(time: 2, unit: 'MINUTES') {
+                timeout(time: 1, unit: 'MINUTES') {
                     sh 'echo "Doing step 3"'
                 }    
             }
