@@ -3,6 +3,3 @@
 A simple project to test jenkins git integration
 And it should be triggered by any change
 
-Update to trigger a hook
-Update to trigger a hook
-
